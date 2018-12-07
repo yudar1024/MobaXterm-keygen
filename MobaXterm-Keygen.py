@@ -122,8 +122,8 @@ def print_help():
     print('Usage:')
     print('    MobaXterm-Keygen.py <UserName> <Version>')
     print()
-    print('    <UserName>:      The Name licensed to')
-    print('    <Version>:       The Version of MobaXterm')
+    print('    <UserName>:      The Name licensed to <me>')
+    print('    <Version>:       The Version of MobaXterm <11.0>')
     print('                     Example:    11.0')
     print()
 
