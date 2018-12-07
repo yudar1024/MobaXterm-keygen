@@ -1,34 +1,37 @@
 # MobaXterm Keygen
 
+	Generate license key for 'MobaXterm'
+
 ## How it work?
 
 Please see source code. It is not complex.
 
-## How to use?
+## How To
 
 ```
 Usage:
-    MobaXterm-Keygen.py <UserName> <Version>
+    python MobaXterm-Keygen.py <UserName> <Version>
 
-    <UserName>:      The Name licensed to
-    <Version>:       The Version of MobaXterm
-                     Example:    10.9
+    <UserName>:      The Name licensed to <me>
+    <Version>:       The Version of MobaXterm <11.0>
 ```
 
-EXAMPLE:
+Example:
 
-```
-PS C:\Users\DoubleSine\Github\MobaXterm-Keygen> .\MobaXterm-Keygen.py "DoubleSine" 10.9
+```batch
+PS path\to\MobaXterm-Keygen>python MobaXterm-Keygen.py me 11.0
 [*] Success!
-[*] File generated: C:\Users\DoubleSine\Github\MobaXterm-Keygen\Custom.mxtpro
+[*] File generated: path\to\MobaXterm-Keygen\Custom.mxtpro
 [*] Please move or copy the newly-generated file to MobaXterm's installation path.
 ```
 
-Then copy `Custom.mxtpro` to `C:\Program Files (x86)\Mobatek\MobaXterm`.
+Then copy `Custom.mxtpro` to `%ProgramFiles%\MobaXterm\v11.0\`.
 
-## Screenshot
+## Screen shot
 
-![](pic0.png)
+![](v11.0-about.png)
+
+---
 
 ## Postscript
 
