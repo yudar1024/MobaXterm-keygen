@@ -123,14 +123,13 @@ def print_help():
     print('    MobaXterm-Keygen.py <UserName> <Version>')
     print()
     print('    <UserName>:      The Name licensed to <me>')
-    print('    <Version>:       The Version of MobaXterm <11.0>')
-    print('                     Example:    11.0')
+    print('    <Version>:       The Version of MobaXterm <11.1>')
     print()
 
 
 if __name__ == '__main__':
     """
-    $ python MobaXterm-Keygen.py me 11.0
+    $ python MobaXterm-Keygen.py me 11.1
     """
     if len(sys.argv) != 3:
         print_help()
