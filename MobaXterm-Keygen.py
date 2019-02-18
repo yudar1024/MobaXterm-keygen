@@ -96,9 +96,9 @@ class LicenseType:
 
 def generate_license(license_type: int, user: str, major_version: int, minor_version: int, count: int):
     """
-    Generate a license key file
+    Generate a license key file for MobaXterm
 
-    :param license_type: License Type, 1-Professional 3-Educational 4-Personal
+    :param license_type: License Type: 1-Professional 3-Educational 4-Personal
     :param user: licensee name, me etc.
     :param major_version: MobaXterm major version, 11 etc.
     :param minor_version: MobaXterm minor version, 0, 9, etc.
@@ -106,16 +106,17 @@ def generate_license(license_type: int, user: str, major_version: int, minor_ver
     :return: none
     """
     assert (count >= 0)
-    lic_str = '%d#%s|%d%d#%d#%d3%d6%d#%d#%d#%d#' % (license_type,
+    # lic_key: '1#me|111#1#113161#0#0#0#'
+    lic_key = '%d#%s|%d%d#%d#%d3%d6%d#%d#%d#%d#' % (license_type,
                                                     user, major_version, minor_version,
                                                     count,
                                                     major_version, minor_version, minor_version,
                                                     0,  # Unknown
                                                     0,  # No Games flag. 0 means "NoGames = false". But it does not work.
                                                     0)  # No Plugins flag. 0 means "NoPlugins = false". But it does not work.
-    encoded_lic_str = variant_base64_encode(encrypt_bytes(0x787, lic_str.encode())).decode()
+    encoded_lic_key = variant_base64_encode(encrypt_bytes(0x787, lic_key.encode())).decode()
     with zipfile.ZipFile('Custom.mxtpro', 'w') as f:
-        f.writestr('Pro.key', data=encoded_lic_str)
+        f.writestr('Pro.key', data=encoded_lic_key)
 
 
 def print_help():
@@ -139,7 +140,7 @@ if __name__ == '__main__':
         MajorVersion = int(MajorVersion)
         MinorVersion = int(MinorVersion)
         generate_license(LicenseType.Professional,
-                         sys.argv[1],
+                         sys.argv[1],    # user name
                          MajorVersion,
                          MinorVersion,
                          1)
