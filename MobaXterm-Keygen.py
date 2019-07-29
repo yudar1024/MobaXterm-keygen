@@ -4,7 +4,7 @@
 # ------------------------------------------
 #   @author: Double Sine -- Thanks to the original author or authors!
 #   @License: GPLv3
-#   @date 2018-12-07 15:06 Generate license key for 'MobaXterm v11.0' to 'me'
+#   @date 2019-07-29 10:28:17 Generate license key for 'MobaXterm v12.0' to 'me'
 # ------------------------------------------
 import os
 import sys
@@ -100,13 +100,13 @@ def generate_license(license_type: int, user: str, major_version: int, minor_ver
 
     :param license_type: License Type: 1-Professional 3-Educational 4-Personal
     :param user: licensee name, me etc.
-    :param major_version: MobaXterm major version, 11 etc.
-    :param minor_version: MobaXterm minor version, 0, 9, etc.
+    :param major_version: MobaXterm major version, 12 etc.
+    :param minor_version: MobaXterm minor version, 0, 0, etc.
     :param count: licensee count
     :return: none
     """
     assert (count >= 0)
-    # lic_key: '1#me|111#1#113161#0#0#0#'
+    # lic_key: '1#me|120#1#123060#0#0#0#'
     lic_key = '%d#%s|%d%d#%d#%d3%d6%d#%d#%d#%d#' % (license_type,
                                                     user, major_version, minor_version,
                                                     count,
@@ -124,13 +124,13 @@ def print_help():
     print('    MobaXterm-Keygen.py <UserName> <Version>')
     print()
     print('    <UserName>:      The Name licensed to <me>')
-    print('    <Version>:       The Version of MobaXterm <11.1>')
+    print('    <Version>:       The Version of MobaXterm <12.0>')
     print()
 
 
 if __name__ == '__main__':
     """
-    $ python MobaXterm-Keygen.py me 11.1
+    $ python MobaXterm-Keygen.py me 12.0
     """
     if len(sys.argv) != 3:
         print_help()
@@ -144,9 +144,9 @@ if __name__ == '__main__':
                          MajorVersion,
                          MinorVersion,
                          1)
-        print('[*] Success!')
+        print('[*] OK!')
         print('[*] File generated: %s' % os.path.join(os.getcwd(), 'Custom.mxtpro'))
-        print('[*] Please move or copy the newly-generated file to MobaXterm\'s installation path.')
+        print("[*] Please move or copy the newly-generated file to MobaXterm's installation path.")
         print()
 else:
     print('[*] ERROR: Please run this script directly')
