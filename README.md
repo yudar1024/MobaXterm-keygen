@@ -29,7 +29,7 @@ Then copy `Custom.mxtpro` to `%ProgramFiles%\MobaXterm\v12.0\`.
 
 ## Screen shot
 
-![](v11.0-about.png)
+![](v12.0-about.png)
 
 ---
 
